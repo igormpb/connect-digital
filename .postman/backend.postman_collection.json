@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "ecfaae61-f674-4643-b81e-ad74e2db2f03",
+		"name": "backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14201804"
+	},
+	"item": [
+		{
+			"name": "payments",
+			"item": [
+				{
+					"name": "/payments/pix",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/payments/pix",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"payments",
+								"pix"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "/transaction/webhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 686401,\r\n\"type\": \"transaction\",\r\n\"objectId\": \"282\",\r\n\"url\": \"https://test.com\",\r\n\"data\": {\r\n\"id\": 282,\r\n\"amount\": 10000,\r\n\"refundedAmount\": 0,\r\n\"companyId\": 2,\r\n\"installments\": 12,\r\n\"paymentMethod\": \"credit_card\",\r\n\"status\": \"paid\",\r\n\"postbackUrl\": null,\r\n\"metadata\": null,\r\n\"traceable\": false,\r\n\"secureId\": \"a4594817-be48-4a23-81aa-4bb01f95fe78\",\r\n\"secureUrl\":\r\n\"https://link.compra.com.br/pagar/a4594817-be48-4a23-81aa-4bb01f95fe78\",\r\n\"createdAt\": \"2022-07-18T09:54:22.000Z\",\r\n\"updatedAt\": \"2022-07-18T09:54:22.000Z\",\r\n\"paidAt\": \"2022-07-18T09:54:22.000Z\",\r\n\"ip\": null,\r\n\"externalRef\": null,\r\n\"customer\": {\r\n\"id\": 1,\r\n\"externalRef\": null,\r\n\"name\": \"Gabryel\",\r\n\"email\": \"gabryel@hotmail.com\",\r\n\"phone\": \"11999999999\",\r\n\"birthdate\": null,\r\n\"createdAt\": \"2022-05-26T19:17:48.000Z\",\r\n\"document\": {\r\n\"number\": \"12345678910\",\r\n\"type\": \"cpf\"\r\n},\r\n\"address\": {\r\n\"street\": \"Rua República Argentina\",\r\n\"streetNumber\": \"4214\",\r\n\"complement\": null,\r\n\"zipCode\": \"11065030\",\r\n\"neighborhood\": \"Pompéia\",\r\n\"city\": \"Santos\",\r\n\"state\": \"SP\",\r\n\"country\": \"BR\"\r\n}\r\n},\r\n\"card\": {\r\n\"id\": 147,\r\n\"brand\": \"visa\",\r\n\"holderName\": \"GABRYEL FERREIRA\",\r\n\"lastDigits\": \"1111\",\r\n\"expirationMonth\": 3,\r\n\"expirationYear\": 2028,\r\n\"reusable\": true,\r\n\"createdAt\": \"2022-07-17T18:08:11.000Z\"\r\n},\r\n\"items\": [\r\n{\r\n\"externalRef\": null,\r\n\"title\": \"b456\",\r\n\"unitPrice\": 100,\r\n\"quantity\": 1,\r\n\"tangible\": false\r\n}\r\n],\r\n\"splits\": [\r\n{\r\n\"recipientId\": 1,\r\n\"amount\": 10000,\r\n\"netAmount\": 9400\r\n}\r\n],\r\n\"fee\": {\r\n\"fixedAmount\": 200,\r\n\"spreadPercentage\": 4,\r\n\"estimatedFee\": 600,\r\n\"netAmount\": 9400\r\n}\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/transactions/webhook",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transactions",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/transactions?externalId=&amount=&refundedAmount=&companyId=&installments=&paymentMethod=&status=&secureId=&secureUrl=&createdAt=&updatedAt=&paidAt=&name=&email=&phone=&documentType=&documentValue=&customerCreatedAt=&street=&streetNumber=&complement=&zipCode=&neighborhood=&city=rio&state=&country=",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "externalId",
+									"value": ""
+								},
+								{
+									"key": "amount",
+									"value": ""
+								},
+								{
+									"key": "refundedAmount",
+									"value": ""
+								},
+								{
+									"key": "companyId",
+									"value": ""
+								},
+								{
+									"key": "installments",
+									"value": ""
+								},
+								{
+									"key": "paymentMethod",
+									"value": ""
+								},
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "secureId",
+									"value": ""
+								},
+								{
+									"key": "secureUrl",
+									"value": ""
+								},
+								{
+									"key": "createdAt",
+									"value": ""
+								},
+								{
+									"key": "updatedAt",
+									"value": ""
+								},
+								{
+									"key": "paidAt",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "phone",
+									"value": ""
+								},
+								{
+									"key": "documentType",
+									"value": ""
+								},
+								{
+									"key": "documentValue",
+									"value": ""
+								},
+								{
+									"key": "customerCreatedAt",
+									"value": ""
+								},
+								{
+									"key": "street",
+									"value": ""
+								},
+								{
+									"key": "streetNumber",
+									"value": ""
+								},
+								{
+									"key": "complement",
+									"value": ""
+								},
+								{
+									"key": "zipCode",
+									"value": ""
+								},
+								{
+									"key": "neighborhood",
+									"value": ""
+								},
+								{
+									"key": "city",
+									"value": "rio"
+								},
+								{
+									"key": "state",
+									"value": ""
+								},
+								{
+									"key": "country",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
