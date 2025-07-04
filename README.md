@@ -1,6 +1,4 @@
 
-# 💻 Projeto de Pagamento com PIX
-
 Este projeto é composto por um **backend NestJS** e um **frontend Vite React**, preparados para rodar em ambiente Docker Compose com **PostgreSQL**.  
 Ele gerencia pagamentos via PIX e está pronto para execução automatizada com migrations e integração frontend-backend.
 
